@@ -11,6 +11,18 @@ public class Actor {
         this.age = age;
     }
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
+    public void setGender(String gender) {
+        this.gender = gender;
+    }
+
+    public void setAge(int age) {
+        this.age = age;
+    }
+
     public void displayActorDetails() {
         System.out.println("Actor:" +name);
         System.out.println("Gender:" +gender);
