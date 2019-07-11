@@ -16,18 +16,11 @@ import org.springframework.core.io.FileSystemResource;
 public class Main {
     public static void main(String args[]){
         ApplicationContext context=new ClassPathXmlApplicationContext("file:src/beans.xml");
-        Movie mov=context.getBean("movie",Movie.class);
-        mov.display();
-        Movie movie=context.getBean("movie1",Movie.class);
-        movie.display();
-        BeanFactory factory=new FileSystemXmlApplicationContext(("src/beans.xml"));
-        Movie mov1=factory.getBean("movie",Movie.class);
-        mov1.display();
-        BeanDefinitionRegistry beanDefinitionRegistry=new DefaultListableBeanFactory();
-        XmlBeanDefinitionReader reader=new XmlBeanDefinitionReader(beanDefinitionRegistry);
-        reader.loadBeanDefinitions((new FileSystemResource("src/beans.xml")));
-        Movie movie2=((DefaultListableBeanFactory)beanDefinitionRegistry).getBean("movie",Movie.class);
-        movie2.display();
+        Movie movieA=context.getBean("movieA",Movie.class);
+        movieA.display();
+        Movie movieB=context.getBean("movieB",Movie.class);
+        movieB.display();
+
 
     }
 }
