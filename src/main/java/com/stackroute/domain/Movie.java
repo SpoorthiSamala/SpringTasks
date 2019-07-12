@@ -30,6 +30,6 @@ public class Movie implements ApplicationContextAware, BeanFactoryAware, BeanNam
     }
 
     public void setBeanName(String s) {
-        System.out.println(s);
+        System.out.println("Bean Name: " + s);
     }
 }
