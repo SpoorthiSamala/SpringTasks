@@ -13,6 +13,4 @@
     <bean id="movie" class="com.stackroute.domain.Movie" autowire="byName">
         <constructor-arg name="actor" ref="actor1"/>
     </bean>
-
-    <bean id="movie1" class="com.stackroute.domain.Movie" autowire="constructor"/>
 </beans>
